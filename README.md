@@ -3,9 +3,11 @@
 
 # 注意 Attention
 组件 MXLPlayer 导出功能正常，但导出完成后会意外退出，使用播放功能也会导致意外退出。（macOS禁止在主线程之外进行界面渲染）
+
 由于本人无任何编程经验，因此该 Bug 短期内不会被修复。
 
 The export function of the MXLPlayer component works fine, but it unexpectedly exits after completing the export. The playback function also causes unexpected exits. (macOS prohibits UI rendering outside the main thread). 
+
 Due to my lack of programming experience, this bug will not be fixed in the short term.
 
 
