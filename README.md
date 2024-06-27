@@ -1,6 +1,13 @@
 # AVPStudio
 杜比影院动态视听走廊显示内容制作工具。
 
+# 注意 Attention
+组件 MXLPlayer 导出功能正常，但导出完成后会意外退出，使用播放功能也会导致意外退出。（macOS禁止在主线程之外进行界面渲染）
+由于本人无任何编程经验，因此该 Bug 短期内不会被修复。
+The export function of the MXLPlayer component works fine, but it unexpectedly exits after completing the export. The playback function also causes unexpected exits. (macOS prohibits UI rendering outside the main thread). 
+Due to my lack of programming experience, this bug will not be fixed in the short term.
+
+
 ## 简介
 部分杜比影院在影厅入口处建设有动态视听走廊系统。该系统使用由科视数字系统公司（Christie Digital）研发的科视Christie® 潘多拉魔盒®系列媒体和显示控制系统，使用多个超短焦投影仪投影多个相邻画面并进行几何校正与边缘融合，实现在白墙上呈现出一个颇具沉浸感的长画面，以在观众进入影厅前营造观影氛围。
 
