@@ -3,7 +3,7 @@ Dolby Cinema signature entrance (AVP) display content production tool.
 
 [简体中文](/README_zh_CN.md)
 
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/izwb003/AVPStudio/total)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Ayasanorin/AVPStudio-Mac/total)
 ![GitHub Release](https://img.shields.io/github/v/release/izwb003/AVPStudio)
 ![GitHub last commit](https://img.shields.io/github/last-commit/izwb003/AVPStudio)
 ![Follow bilibili](https://img.shields.io/badge/follow_me-on_bilibili-blue?logo=bilibili&link=https%3A%2F%2Fspace.bilibili.com%2F36937211)
