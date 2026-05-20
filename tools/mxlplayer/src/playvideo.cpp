@@ -473,7 +473,7 @@ void TPlayVideo::run()
 
     while(true)
     {
-        while(SDL_PollEvent(&eventSDL))
+        while(SDL_PeepEvents(&eventSDL, 1, SDL_GETEVENT, SDL_FIRSTEVENT, SDL_LASTEVENT) > 0)
         {
             if(eventSDL.type == SDL_CUSTOM_REFRESH_EVENT)
             {
@@ -541,5 +541,6 @@ void TPlayVideo::run()
                 emit sdlQuit();
             }
         }
+        SDL_Delay(1);
     }
 }

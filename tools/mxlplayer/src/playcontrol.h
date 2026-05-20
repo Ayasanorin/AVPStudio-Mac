@@ -25,6 +25,7 @@
 #include <QWidget>
 #include <QMouseEvent>
 #include <QTime>
+#include <QTimer>
 
 namespace Ui {
 class PlayControl;
@@ -64,6 +65,7 @@ private:
     int muteVolume = 0;
 
     TPlayVideo *videoPlayer = NULL;
+    QTimer *pumpTimer = NULL;
 
 private slots:
     inline void startDragging()  {isDragging = true;}
@@ -84,6 +86,8 @@ private slots:
     void on_toolButtonPlayPause_clicked(bool checked);
 
     void on_horizontalSliderPosition_sliderReleased();
+
+    void onPumpEvents();
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;

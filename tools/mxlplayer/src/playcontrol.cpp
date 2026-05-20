@@ -17,6 +17,7 @@
  */
 #include "playcontrol.h"
 #include "ui_playcontrol.h"
+#include <SDL.h>
 
 #include <QMessageBox>
 #include <QToolTip>
@@ -51,6 +52,10 @@ PlayControl::PlayControl(QWidget *parent, QString mxlPath, QString wavPath, AVP:
         qApp->quit();
 
     videoPlayer->start();
+
+    pumpTimer = new QTimer(this);
+    connect(pumpTimer, &QTimer::timeout, this, &PlayControl::onPumpEvents);
+    pumpTimer->start(16);
 }
 
 PlayControl::~PlayControl()
@@ -164,4 +169,9 @@ void PlayControl::on_toolButtonPlayPause_clicked(bool checked)
 void PlayControl::on_horizontalSliderPosition_sliderReleased()
 {
     emit updatePosition(ui->horizontalSliderPosition->value());
+}
+
+void PlayControl::onPumpEvents()
+{
+    SDL_PumpEvents();
 }

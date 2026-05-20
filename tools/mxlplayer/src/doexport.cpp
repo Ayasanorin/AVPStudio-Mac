@@ -239,7 +239,7 @@ void TDoExport::run()
         oAudioEncoderCxt -> ch_layout = iAudioDecoderCxt->ch_layout;
         oAudioEncoderCxt -> sample_fmt = AV_SAMPLE_FMT_FLTP;
         oAudioEncoderCxt -> sample_rate = iAudioDecoderCxt -> sample_rate;
-        oAudioEncoderCxt -> profile = FF_PROFILE_AAC_LOW;
+        oAudioEncoderCxt -> profile = AV_PROFILE_AAC_LOW;
         oAudioEncoderCxt -> flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
     }
 

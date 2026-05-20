@@ -74,3 +74,20 @@ CMakeLists.txt.user*
 
 # ffmpeg release
 external/ffmpeg
+
+# Project specific ignores
+build-agy/
+external/SDL/
+
+# IDEs
+.vscode/
+.idea/
+cmake-build-*/
+
+# macOS metadata
+.AppleDouble
+.LSOverride
+._*
+
+# Logs
+*.log

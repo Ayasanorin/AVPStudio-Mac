@@ -21,6 +21,8 @@
 #include "settings.h"
 
 #include <QXmlStreamReader>
+#include <QApplication>
+#include <QFile>
 
 PageWelcome::PageWelcome(QWidget *parent)
     : QWidget(parent)
@@ -40,7 +42,12 @@ PageWelcome::~PageWelcome()
 
 void PageWelcome::fillCinemaList()
 {
-    QFile cinemaListFile("cinemalist.xml");
+#ifdef Q_OS_MAC
+    QString path = qApp->applicationDirPath() + "/../Resources/cinemalist.xml";
+#else
+    QString path = "cinemalist.xml";
+#endif
+    QFile cinemaListFile(path);
     if(!cinemaListFile.open(QIODevice::ReadOnly))
         return;
 

@@ -22,6 +22,12 @@ if(WIN32)
     )
 endif(WIN32)
 
+if(APPLE)
+    set(MACOS_ICON ${CMAKE_SOURCE_DIR}/res/icons/icns/wavgenerator_icon256.icns)
+    set_source_files_properties(${MACOS_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+    list(APPEND PROJECT_SOURCES ${MACOS_ICON})
+endif(APPLE)
+
 # Set Qt executables
 qt_add_executable(wavgenerator
     MANUAL_FINALIZATION
@@ -50,6 +56,7 @@ set_target_properties(wavgenerator PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
+    MACOSX_BUNDLE_ICON_FILE wavgenerator_icon256.icns
     WIN32_EXECUTABLE TRUE
 )
 
